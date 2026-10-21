@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Shivam & Khushi ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <div class="top-note">A LITTLE SOMETHING, MADE WITH LOVE</div>
+
+  <main class="site-shell">
+
+    <!-- FIRST SCREEN: ENVELOPE -->
+    <section class="intro" id="intro">
+      <p class="eyebrow">To my favourite person</p>
+      <h1>Shivam <span class="amp">&</span> Khushi</h1>
+      <p class="subtitle">One little website. A million feelings. ♡</p>
+
+      <div class="envelope-wrap">
+        <div class="envelope" id="envelope" role="button" tabindex="0">
+          <div class="envelope-back"></div>
+          <div class="letter-peek">
+            <span>For you, always</span>
+            <b>♡</b>
+          </div>
+          <div class="envelope-front"></div>
+          <div class="envelope-flap"></div>
+          <div class="wax-seal">S<span>♥</span>K</div>
+        </div>
+        <p class="tap-hint">Tap the envelope to open your letter</p>
+      </div>
+
+      <button class="primary-btn" id="openLetterBtn">
+        Open my letter ♡
+      </button>
+    </section>
+
+    <!-- LOVE LETTER -->
+    <section class="letter-section hidden" id="letterSection">
+      <div class="section-card letter-card">
+        <p class="eyebrow">A letter from my heart</p>
+        <h2>To my Shivam, <em>my favourite hello.</em></h2>
+
+        <div class="letter-copy">
+          <p>
+            Somehow, out of all the people in this world, life gave me
+            <strong>you</strong> — and that is a little piece of magic
+            I will never stop being grateful for.
+          </p>
+          <p>
+            Thank you for the smiles, the silly moments, the little things
+            you do, and the way ordinary days feel special when you're part
+            of them. I don't need every day to be perfect. I just want the
+            real, happy, messy, beautiful days with you.
+          </p>
+          <p>
+            If I could make one wish for us, it would be this: may we keep
+            choosing each other, keep laughing at our own jokes, keep
+            learning, and keep finding our way back to one another.
+          </p>
+          <p class="signoff">
+            Always your person,<br>
+            <span>Khushi ♡</span>
+          </p>
+        </div>
+
+        <button class="primary-btn next-btn" data-next="questionSection">
+          There's one more thing… →
+        </button>
+      </div>
+    </section>
+
+    <!-- YES / NO QUESTION -->
+    <section class="hidden" id="questionSection">
+      <div class="section-card question-card">
+        <div class="tiny-heart">♥</div>
+        <p class="eyebrow">Important question, mister</p>
+        <h2>Shivam, will you keep making beautiful memories with me?</h2>
+        <p class="muted">Choose wisely. I'm watching you. 👀</p>
+
+        <div class="choice-row">
+          <button class="primary-btn" id="yesBtn">YES, ALWAYS ♡</button>
+          <button class="soft-btn" id="noBtn">No 🙈</button>
+        </div>
+        <p class="response" id="response"></p>
+      </div>
+    </section>
+
+    <!-- ANNIVERSARY CAKE -->
+    <section class="hidden" id="celebrationSection">
+      <div class="section-card celebration-card">
+        <div class="celebrate-icon">✧</div>
+        <p class="eyebrow">I knew you'd say yes</p>
+        <h2>Yay! It's a <em>forever kind of thing.</em></h2>
+        <p class="muted">Make a wish, my love.</p>
+
+        <div class="cake" id="cake" role="button" tabindex="0">
+          <div class="flame" id="flame"></div>
+          <div class="candle"></div>
+          <div class="cake-top"></div>
+          <div class="cake-layer layer-one"></div>
+          <div class="cake-layer layer-two"></div>
+          <div class="cake-plate"></div>
+        </div>
+
+        <p class="tap-hint">Tap the candle to make a wish</p>
+        <p class="response" id="wishResponse"></p>
+
+        <button class="primary-btn next-btn" data-next="giftsSection">
+          Open your little gifts ♡
+        </button>
+      </div>
+    </section>
+
+    <!-- CLICKABLE GIFTS -->
+    <section class="hidden" id="giftsSection">
+      <div class="section-heading">
+        <p class="eyebrow">A few little surprises</p>
+        <h2>Open when you're ready, <em>love.</em></h2>
+        <p class="muted">Each box has a tiny piece of my heart inside.</p>
+      </div>
+
+      <div class="gift-grid">
+        <button class="gift-card" data-gift="0">
+          <span class="gift-emoji">🎁</span>
+          <span>Gift no. 1</span>
+          <small>A little reminder</small>
+        </button>
+        <button class="gift-card" data-gift="1">
+          <span class="gift-emoji">💌</span>
+          <span>Gift no. 2</span>
+          <small>Something I adore</small>
+        </button>
+        <button class="gift-card" data-gift="2">
+          <span class="gift-emoji">✨</span>
+          <span>Gift no. 3</span>
+          <small>A promise for us</small>
+        </button>
+      </div>
+
+      <div class="gift-message hidden" id="giftMessage">
+        <button class="close-gift" id="closeGift">×</button>
+        <p class="eyebrow" id="giftEyebrow"></p>
+        <h3 id="giftTitle"></h3>
+        <p id="giftText"></p>
+      </div>
+
+      <button class="primary-btn next-btn" data-next="couponSection">
+        Your love coupons are next →
+      </button>
+    </section>
+
+    <!-- LOVE COUPONS -->
+    <section class="hidden" id="couponSection">
+      <div class="section-heading">
+        <p class="eyebrow">Redeemable for hugs & happiness</p>
+        <h2>Love coupons <em>for you.</em></h2>
+        <p class="muted">Tap a coupon to redeem it. No expiry date. Ever.</p>
+      </div>
+
+      <div class="coupon-grid">
+        <button class="coupon" data-coupon="0">
+          <span>COUPON 01</span>
+          <b>One extra-long hug</b>
+          <small>Redeem anytime ♡</small>
+        </button>
+        <button class="coupon" data-coupon="1">
+          <span>COUPON 02</span>
+          <b>Your choice of date</b>
+          <small>You pick the plan ✨</small>
+        </button>
+        <button class="coupon" data-coupon="2">
+          <span>COUPON 03</span>
+          <b>Unlimited forehead kisses</b>
+          <small>Terms: none 💋</small>
+        </button>
+        <button class="coupon" data-coupon="3">
+          <span>COUPON 04</span>
+          <b>A no-judgement rant</b>
+          <small>I'll listen, always ☁</small>
+        </button>
+      </div>
+
+      <p class="response" id="couponResponse"></p>
+      <button class="primary-btn next-btn" data-next="memoriesSection">
+        Let's look at our memories ♡
+      </button>
+    </section>
+
+    <!-- PHOTO MEMORIES -->
+    <section class="hidden" id="memoriesSection">
+      <div class="section-heading">
+        <p class="eyebrow">Little moments, big feelings</p>
+        <h2>Our tiny <em>memory lane.</em></h2>
+        <p class="muted">Add your favourite photos together.</p>
+      </div>
+
+      <div class="memory-grid">
+        <button class="memory-card" data-photo="photos/photo1.jpg">
+          <div class="photo-placeholder"><span>♡</span><small>Add photo 1</small></div>
+          <b>My favourite moment</b>
+          <small>One I'll keep forever</small>
+        </button>
+        <button class="memory-card" data-photo="photos/photo2.jpg">
+          <div class="photo-placeholder"><span>✧</span><small>Add photo 2</small></div>
+          <b>Us being us</b>
+          <small>My kind of happiness</small>
+        </button>
+        <button class="memory-card" data-photo="photos/photo3.jpg">
+          <div class="photo-placeholder"><span>♥</span><small>Add photo 3</small></div>
+          <b>A day to remember</b>
+          <small>More memories to come</small>
+        </button>
+      </div>
+
+      <div class="photo-viewer hidden" id="photoViewer">
+        <button class="close-gift" id="closePhoto">×</button>
+        <img id="viewerImage" src="" alt="Our memory">
+        <p id="viewerCaption">A little memory ♡</p>
+      </div>
+
+      <div class="final-note">
+        <div class="final-heart">♥</div>
+        <p class="eyebrow">Until all our next chapters</p>
+        <h2>Happy Anniversary, <em>Shivam.</em></h2>
+        <p>
+          In every version of my future, I hope there's a little more
+          laughter, a little more adventure, and a whole lot of us.
+        </p>
+        <p class="final-sign">With all my love,<br><strong>Your Khushi ♡</strong></p>
+        <button class="soft-btn" id="restartBtn">Read it all again ↻</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- OPTIONAL BACKGROUND MUSIC -->
+  <button class="music-toggle" id="musicToggle">♫ <span>Music: off</span></button>
+  <audio id="bgMusic" loop>
+    <source src="music/our-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
