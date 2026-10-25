@@ -594,60 +594,69 @@ section:not(.intro) {
 
 /* PHOTO MEMORIES */
 
+
+ 
+/* Fix overlapping memory photos */
+.memory-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  align-items: start;
+}
+
 .memory-card {
-  border: 0;
-  background: transparent;
-  padding: 0;
-  text-align: left;
-  cursor: pointer;
-  color: var(--wine-dark);
-}
-
-.photo-placeholder {
-  aspect-ratio: 4 / 5;
-  border-radius: 16px;
-  background: linear-gradient(145deg, #f5dfe0, #f3e7d7);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #b76b7b;
-  margin-bottom: 12px;
-  transition: transform .25s;
-  overflow: hidden;
-}
-
-.photo-placeholder span {
-  font-family: serif;
-  font-size: 2.5rem;
-}
-
-.photo-placeholder small {
-  margin-top: 8px;
-}
-
-.memory-card:hover .photo-placeholder {
-  transform: translateY(-5px) rotate(1deg);
-}
-
-.memory-card b {
+  position: relative;
   display: block;
-  font-size: .85rem;
-  margin: 0 0 5px;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  margin: 0;
+  padding: 12px;
+  overflow: hidden;
+  transform: none;
 }
 
-.photo-viewer img {
-  max-width: 100%;
-  max-height: 65vh;
-  object-fit: contain;
-  border-radius: 10px;
+.memory-card img {
+  display: block;
+  position: static;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin: 0 0 12px;
+  border-radius: 14px;
 }
 
-.photo-viewer p {
-  color: var(--wine);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem;
-  margin-bottom: 0;
+.memory-card b,
+.memory-card small {
+  display: block;
+  position: static;
+  margin: 8px 0;
+}
+
+/* Laptop/mobile screen adjustment */
+@media (max-width: 700px) {
+  .memory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .memory-card img {
+    height: 190px;
+  }
+}
+
+@media (max-width: 420px) {
+  .memory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .memory-card img {
+    height: 280px;
+  }
+}
+
 }
 
 /* FINAL MESSAGE */
